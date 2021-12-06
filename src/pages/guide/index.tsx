@@ -1,8 +1,9 @@
-import { Form, Input, Button, Checkbox, Upload, Modal, Card } from 'antd';
+import { Form, Input, Button, Upload, Modal, Card } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { UploadFile } from 'antd/lib/upload/interface';
 import { useState } from 'react';
 import { ValidateStatus } from 'antd/lib/form/FormItem';
+import './index.less';
 
 interface FileValidation {
   validateStatus?: ValidateStatus;
@@ -85,6 +86,7 @@ const GuidePge: React.FC = () => {
             action={''}
             name={'fileList'}
             listType="picture-card"
+            className="upload__file"
             fileList={fileList}
             onPreview={handlePreview}
             onChange={handleChangeImage}
